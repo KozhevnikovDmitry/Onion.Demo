@@ -8,11 +8,11 @@ using Onion.Demo.DM;
 
 namespace Onion.Demo.NH
 {
-    public class EmployeeRepository : IEmployeeRepository
+    internal class NhEmployeeRepository : IEmployeeRepository
     {
         private readonly ISessionFactory _sessionFactory;
 
-        public EmployeeRepository(ISessionFactory sessionFactory)
+        public NhEmployeeRepository(ISessionFactory sessionFactory)
         {
             _sessionFactory = sessionFactory;
         }

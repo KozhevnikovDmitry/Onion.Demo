@@ -1,15 +1,17 @@
-﻿using FluentNHibernate.Cfg;
+﻿using System.Data.SqlServerCe;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Cfg;
+using NHibernate.Tool.hbm2ddl;
 
 namespace Onion.Demo.NH
 {
-    public class Schema
+    internal class Schema
     {
         public Schema()
         {
-            Config = MsSqlCeConfiguration.MsSqlCe40
+            Config = MsSqlCeConfiguration.Standard
                                          .ConnectionString(c => c.FromConnectionStringWithKey("OnionDemo"))
                                          .FormatSql()
                                          .ShowSql();
@@ -20,6 +22,14 @@ namespace Onion.Demo.NH
             return Fluently.Configure()
                            .Database(Config)
                            .Mappings(m => m.FluentMappings.AddFromAssembly(typeof(EmployeeMap).Assembly))
+                           .ExposeConfiguration(cfg =>
+                                    {
+                                        var schema = new SchemaExport(cfg);
+                                        var engine = new SqlCeEngine("Data Source=OnionDemo.sdf");
+                                        engine.CreateDatabase();
+                                        schema.Drop(true, true);
+                                        schema.Create(true, true);
+                                    })
                            .BuildConfiguration()
                            .DataBaseIntegration(db =>
                            {

@@ -7,11 +7,11 @@ using Onion.Demo.DM;
 
 namespace Onion.Demo.EF
 {
-    public class EmployeeRepository : IEmployeeRepository
+    internal class EfEmployeeRepository : IEmployeeRepository
     {
         private readonly DbContextFactory _dbContextFactory;
 
-        public EmployeeRepository(DbContextFactory dbContextFactory)
+        public EfEmployeeRepository(DbContextFactory dbContextFactory)
         {
             _dbContextFactory = dbContextFactory;
         }

@@ -3,7 +3,7 @@ using Onion.Demo.DM;
 
 namespace Onion.Demo.NH
 {
-    public class EmployeeMap : ClassMap<Employee>
+    internal class EmployeeMap : ClassMap<Employee>
     {
         public EmployeeMap()
         {

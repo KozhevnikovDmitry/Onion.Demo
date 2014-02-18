@@ -2,7 +2,7 @@
 
 namespace Onion.Demo.Client
 {
-    public class FiscalFacade : IFiscalFacade
+    internal class ClientFiscalFacade : IFiscalFacade
     {
         public double CalculateAllTax()
         {

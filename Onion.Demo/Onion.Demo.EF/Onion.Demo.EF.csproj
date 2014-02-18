@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.3.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
@@ -56,16 +59,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EfModule.cs" />
     <Compile Include="EmployeeConfiguration.cs" />
-    <Compile Include="EmployeeRepository.cs" />
+    <Compile Include="EfEmployeeRepository.cs" />
+    <Compile Include="OnionConfiguration.cs" />
     <Compile Include="OnionContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DbContextFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Onion.Demo.BL.Interface\Onion.Demo.BL.Interface.csproj">
+    <ProjectReference Include="..\Onion.Demo.BL.Interface\Onion.Demo.DomainServicies.Interface.csproj">
       <Project>{737AF214-C6AA-4E2F-810F-E135B3689AF1}</Project>
-      <Name>Onion.Demo.BL.Interface</Name>
+      <Name>Onion.Demo.DomainServicies.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Onion.Demo.DM\Onion.Demo.DM.csproj">
       <Project>{744D0223-9CDF-427A-BEA2-A227AFFD9E63}</Project>
@@ -73,7 +78,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

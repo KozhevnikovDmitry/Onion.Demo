@@ -1,9 +1,9 @@
 ﻿using System;
 using Onion.Demo.BL.Interface;
 
-namespace Onion.Demo.BL
+namespace Onion.Demo.DomainServicies
 {
-    public class FiscalFacade : IFiscalFacade
+    internal class FiscalFacade : IFiscalFacade
     {
         private readonly IEmployeeRepository _employeeRepository;
         private readonly IFiscalCalc _fiscalCalc;

@@ -1,6 +1,6 @@
 ﻿namespace Onion.Demo.EF
 {
-    public class DbContextFactory
+    internal class DbContextFactory
     {
         public OnionContext Create()
         {

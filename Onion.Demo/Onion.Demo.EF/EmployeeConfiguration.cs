@@ -3,7 +3,7 @@ using Onion.Demo.DM;
 
 namespace Onion.Demo.EF
 {
-    public class EmployeeConfiguration : EntityTypeConfiguration<Employee>
+    internal class EmployeeConfiguration : EntityTypeConfiguration<Employee>
     {
         public EmployeeConfiguration()
         {

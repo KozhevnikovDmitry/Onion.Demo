@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo", "Onion.Demo\Onion.Demo.csproj", "{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{BFD1AF13-B41A-47F8-9293-6B8ED3636405}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainModel", "DomainModel", "{CAA041FC-AED3-4285-BD14-4FE8348383C7}"
@@ -26,9 +24,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.EF", "Onion.Demo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.DM", "Onion.Demo.DM\Onion.Demo.DM.csproj", "{744D0223-9CDF-427A-BEA2-A227AFFD9E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.BL", "Onion.Demo.BL\Onion.Demo.BL.csproj", "{C59CBEFF-C615-4A8A-A393-634ED198E507}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.DomainServicies", "Onion.Demo.DomainServicies\Onion.Demo.DomainServicies.csproj", "{C59CBEFF-C615-4A8A-A393-634ED198E507}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.BL.Interface", "Onion.Demo.BL.Interface\Onion.Demo.BL.Interface.csproj", "{737AF214-C6AA-4E2F-810F-E135B3689AF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.DomainServicies.Interface", "Onion.Demo.BL.Interface\Onion.Demo.DomainServicies.Interface.csproj", "{737AF214-C6AA-4E2F-810F-E135B3689AF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.Services", "Onion.Demo.Services\Onion.Demo.Services.csproj", "{A4B38D41-C215-4904-88FD-D463E7D5978D}"
 EndProject
@@ -46,16 +44,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Debug|x86.ActiveCfg = Debug|x86
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Debug|x86.Build.0 = Debug|x86
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Release|Any CPU.ActiveCfg = Release|x86
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Release|Mixed Platforms.Build.0 = Release|x86
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Release|x86.ActiveCfg = Release|x86
-		{21A49F50-8A80-42B9-A1F3-8573C8B9B9FF}.Release|x86.Build.0 = Release|x86
 		{19E3C5A5-011D-4E8B-9CEA-F46D86565A53}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{19E3C5A5-011D-4E8B-9CEA-F46D86565A53}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{19E3C5A5-011D-4E8B-9CEA-F46D86565A53}.Debug|Mixed Platforms.Build.0 = Debug|x86

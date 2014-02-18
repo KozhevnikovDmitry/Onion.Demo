@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Onion.Demo.BL.Interface;
 using Onion.Demo.DM;
 
-namespace Onion.Demo.BL
+namespace Onion.Demo.DomainServicies
 {
-    public class FiscalCalc : IFiscalCalc
+    internal class FiscalCalc : IFiscalCalc
     {
         public double CalculateTax(IList<Employee> employees)
         {

@@ -1,25 +1,17 @@
-﻿using System;
-using System.Linq;
-using System.ServiceModel;
-using System.ServiceModel.Description;
+﻿using System.ServiceModel;
 
 namespace Onion.Demo.Server
 {
     public class OnionServer
     {
-        private ServiceHost _selfHost;
+        private readonly ServiceHost _selfHost;
+        private readonly Root root;
 
         public OnionServer()
         {
-            _selfHost = new ServiceHost(typeof(FiscalService), new Uri("http://localhost:8000/FiscalService/"));
-
-            _selfHost.AddServiceEndpoint(
-                       typeof(IFiscalService),
-                       new BasicHttpBinding(),
-                       "FiscalService");
-
-            _selfHost.Description.Behaviors.Add(new ServiceMetadataBehavior { HttpGetEnabled = true });
-            _selfHost.Description.Behaviors.OfType<ServiceDebugBehavior>().Single().IncludeExceptionDetailInFaults = true;
+            root = new Root();
+            root.Register();
+            _selfHost = root.Resolve();
         }
 
         public void Start()
@@ -30,6 +22,7 @@ namespace Onion.Demo.Server
         public void Stop()
         {
             _selfHost.Close();
+            root.Release();
         }
     }
 }
