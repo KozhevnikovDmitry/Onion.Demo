@@ -1,12 +1,11 @@
 ﻿using System.ServiceModel;
 using Autofac;
-using Autofac.Integration.Wcf;
 using Onion.Demo.BL.Interface;
 using Onion.Demo.Client.FiscalService;
 
 namespace Onion.Demo.Client
 {
-    public class DomainServiciesModule : Module
+    public class ClientModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

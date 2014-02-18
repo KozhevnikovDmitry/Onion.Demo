@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{65F1CC
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.Console", "Onion.Demo.Console\Onion.Demo.Console.csproj", "{19E3C5A5-011D-4E8B-9CEA-F46D86565A53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.ConsoleUI", "Onion.Demo.Console\Onion.Demo.ConsoleUI.csproj", "{19E3C5A5-011D-4E8B-9CEA-F46D86565A53}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.NH", "Onion.Demo.NH\Onion.Demo.NH.csproj", "{B4D56642-2892-4DBF-910A-564BFFAEAD92}"
 EndProject

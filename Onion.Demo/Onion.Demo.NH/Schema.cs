@@ -1,4 +1,6 @@
-﻿using System.Data.SqlServerCe;
+﻿using System;
+using System.Data.SqlServerCe;
+using System.IO;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
@@ -24,11 +26,14 @@ namespace Onion.Demo.NH
                            .Mappings(m => m.FluentMappings.AddFromAssembly(typeof(EmployeeMap).Assembly))
                            .ExposeConfiguration(cfg =>
                                     {
-                                        var schema = new SchemaExport(cfg);
-                                        var engine = new SqlCeEngine("Data Source=OnionDemo.sdf");
-                                        engine.CreateDatabase();
-                                        schema.Drop(true, true);
-                                        schema.Create(true, true);
+                                        if (!File.Exists("OnionDemo.sdf"))
+                                        {
+                                            var schema = new SchemaExport(cfg);
+                                            var engine = new SqlCeEngine("Data Source=OnionDemo.sdf");
+                                            engine.CreateDatabase();
+                                            schema.Drop(true, true);
+                                            schema.Create(true, true);
+                                        }
                                     })
                            .BuildConfiguration()
                            .DataBaseIntegration(db =>

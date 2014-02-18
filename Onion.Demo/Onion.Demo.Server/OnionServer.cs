@@ -1,4 +1,9 @@
 ﻿using System.ServiceModel;
+using Autofac;
+using Onion.Demo.DomainServicies;
+using Onion.Demo.EF;
+using Onion.Demo.NH;
+using Onion.Demo.Services;
 
 namespace Onion.Demo.Server
 {
@@ -10,8 +15,8 @@ namespace Onion.Demo.Server
         public OnionServer()
         {
             root = new Root();
-            root.Register();
-            _selfHost = root.Resolve();
+            root.Register(new EfModule(), new DomainServiciesModule(), new ServerModule());
+            _selfHost = root.Resolve().Resolve<ServiceHost>();
         }
 
         public void Start()
