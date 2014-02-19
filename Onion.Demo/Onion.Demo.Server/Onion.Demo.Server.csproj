@@ -53,7 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmployeeService.cs" />
     <Compile Include="FiscalService.cs" />
+    <Compile Include="IEmployeeService.cs" />
     <Compile Include="IFiscalService.cs" />
     <Compile Include="OnionServer.cs" />
     <Compile Include="Program.cs" />

@@ -1,24 +1,31 @@
-﻿using System.ServiceModel;
+﻿using System.Collections.Generic;
+using System.ServiceModel;
 
 namespace Onion.Demo.Server
 {
     public class OnionServer
     {
-        private readonly ServiceHost _serviceHost;
+        private readonly IEnumerable<ServiceHost> _hosts;
 
-        public OnionServer(ServiceHost serviceHost)
+        public OnionServer(IEnumerable<ServiceHost> hosts)
         {
-            _serviceHost = serviceHost;
+            _hosts = hosts;
         }
 
         public void Start()
         {
-            _serviceHost.Open();
+            foreach (var serviceHost in _hosts)
+            {
+                serviceHost.Open();
+            }
         }
 
         public void Stop()
         {
-            _serviceHost.Close();
+            foreach (var serviceHost in _hosts)
+            {
+                serviceHost.Close();
+            }
         }
     }
 }
