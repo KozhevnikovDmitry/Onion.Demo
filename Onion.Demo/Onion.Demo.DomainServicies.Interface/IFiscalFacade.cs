@@ -1,4 +1,4 @@
-﻿namespace Onion.Demo.BL.Interface
+﻿namespace Onion.Demo.DomainServicies.Interface
 {
     public interface IFiscalFacade
     {

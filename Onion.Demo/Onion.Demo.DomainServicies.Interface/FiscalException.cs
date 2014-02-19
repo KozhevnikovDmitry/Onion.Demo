@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Onion.Demo.BL.Interface
+namespace Onion.Demo.DomainServicies.Interface
 {
     public class FiscalException : BaseException
     {

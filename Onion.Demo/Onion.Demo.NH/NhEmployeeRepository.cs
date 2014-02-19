@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using NHibernate;
 using NHibernate.Linq;
-using Onion.Demo.BL.Interface;
 using Onion.Demo.DM;
+using Onion.Demo.DomainServicies.Interface;
 
 namespace Onion.Demo.NH
 {

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
-using Onion.Demo.BL.Interface;
 using Onion.Demo.DM;
+using Onion.Demo.DomainServicies.Interface;
 
 namespace Onion.Demo.EF
 {
