@@ -15,7 +15,7 @@ namespace Onion.Demo.Server
         public OnionServer()
         {
             root = new Root();
-            root.Register(new EfModule(), new DomainServiciesModule(), new ServerModule());
+            root.Register(new NhModule(), new DomainServiciesModule(), new ServerModule());
             _selfHost = root.Resolve().Resolve<ServiceHost>();
         }
 

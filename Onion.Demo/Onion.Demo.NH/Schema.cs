@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlServerCe;
+using System.Diagnostics;
 using System.IO;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
@@ -46,7 +47,15 @@ namespace Onion.Demo.NH
 
         public ISessionFactory CreateSessionFactory()
         {
-            return Fluently.Configure(GetConfig()).BuildSessionFactory();
+            try
+            {
+                return Fluently.Configure(GetConfig()).BuildSessionFactory();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                throw;
+            }
         }
 
         public IPersistenceConfigurer Config { get; private set; }

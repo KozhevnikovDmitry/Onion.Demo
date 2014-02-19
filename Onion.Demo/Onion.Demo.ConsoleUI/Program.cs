@@ -11,7 +11,7 @@ namespace Onion.Demo.ConsoleUI
         static void Main(string[] args)
         {
             var root = new Root();
-            root.Register(new EfModule(), new DomainServiciesModule(), new ConsoleUiModule());
+            root.Register(new NhModule(), new DomainServiciesModule(), new ConsoleUiModule());
             var demo = root.Resolve().Resolve<OnionDemo>();
 
             demo.Demo();

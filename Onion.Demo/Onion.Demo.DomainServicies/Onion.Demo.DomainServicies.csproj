@@ -51,7 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Onion.Demo.BL.Interface\Onion.Demo.DomainServicies.Interface.csproj">
+    <ProjectReference Include="..\Onion.Demo.DomainServicies.Interface\Onion.Demo.DomainServicies.Interface.csproj">
       <Project>{737AF214-C6AA-4E2F-810F-E135B3689AF1}</Project>
       <Name>Onion.Demo.DomainServicies.Interface</Name>
     </ProjectReference>

@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Onion.Demo.Server")]
+[assembly: AssemblyTitle("Onion.Demo.Srv")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Onion.Demo.Server")]
+[assembly: AssemblyProduct("Onion.Demo.Srv")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f74e2210-7774-4c32-8984-a60a2a26aa2f")]
+[assembly: Guid("19d6a738-cd76-4118-b269-82ae26e67968")]
 
 // Version information for an assembly consists of the following four values:
 //
