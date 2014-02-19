@@ -26,7 +26,7 @@ namespace Onion.Demo.DM
                 return "No Name";
             }
 
-            return string.Format("{0} {1}.{2}.", Surname, Name.First(), Patronymic.First());
+            return string.Format("{0} {1}.{2}. Salary: [{3}]", Surname, Name.First(), Patronymic.First(), Salary.ToString("C"));
         }
     }
 }
