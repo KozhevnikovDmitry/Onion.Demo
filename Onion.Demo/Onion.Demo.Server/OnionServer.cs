@@ -1,33 +1,24 @@
 ﻿using System.ServiceModel;
-using Autofac;
-using Onion.Demo.DomainServicies;
-using Onion.Demo.EF;
-using Onion.Demo.NH;
-using Onion.Demo.Services;
 
 namespace Onion.Demo.Server
 {
     public class OnionServer
     {
-        private readonly ServiceHost _selfHost;
-        private readonly Root root;
+        private readonly ServiceHost _serviceHost;
 
-        public OnionServer()
+        public OnionServer(ServiceHost serviceHost)
         {
-            root = new Root();
-            root.Register(new NhModule(), new DomainServiciesModule(), new ServerModule());
-            _selfHost = root.Resolve().Resolve<ServiceHost>();
+            _serviceHost = serviceHost;
         }
 
         public void Start()
         {
-            _selfHost.Open();
+            _serviceHost.Open();
         }
 
         public void Stop()
         {
-            _selfHost.Close();
-            root.Release();
+            _serviceHost.Close();
         }
     }
 }

@@ -52,6 +52,11 @@ namespace Onion.Demo.EF
             {
                 using (var context = _dbContextFactory.Create())
                 {
+                    if (employee.Id == new Guid())
+                    {
+                        employee.Id = Guid.NewGuid();
+                    }
+
                     context.Employees.AddOrUpdate(employee);
                     context.SaveChanges();
                     return employee;

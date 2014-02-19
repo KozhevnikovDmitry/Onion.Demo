@@ -8,7 +8,7 @@ namespace Onion.Demo.NH
         public EmployeeMap()
         {
             Table("EMPLOYEE");
-            Id(t => t.Id).Column("EMPLOYEE_ID");
+            Id(t => t.Id).Column("EMPLOYEE_ID").GeneratedBy.GuidComb();
             Map(t => t.Name).Column("NAME");
             Map(t => t.Surname).Column("SURNAME");
             Map(t => t.Patronymic).Column("PATRONYMIC");

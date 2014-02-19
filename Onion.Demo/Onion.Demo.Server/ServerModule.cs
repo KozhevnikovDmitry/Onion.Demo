@@ -18,6 +18,7 @@ namespace Onion.Demo.Server
 
             builder.RegisterInstance(host).AsSelf();
             builder.RegisterType<FiscalService>().As<IFiscalService>();
+            builder.RegisterType<OnionServer>().AsSelf();
         }
     }
 }
