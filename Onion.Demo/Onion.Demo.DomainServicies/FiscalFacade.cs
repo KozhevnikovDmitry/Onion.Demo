@@ -1,6 +1,6 @@
 ﻿using Onion.Demo.DomainInterface;
 
-namespace Onion.Demo.DomainServicies
+namespace Onion.Demo.DomainServices
 {
     public class FiscalFacade : IFiscalFacade
     {

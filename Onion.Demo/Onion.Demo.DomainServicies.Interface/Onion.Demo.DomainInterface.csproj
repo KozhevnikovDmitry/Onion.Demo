@@ -48,9 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Onion.Demo.DM\Onion.Demo.DM.csproj">
+    <ProjectReference Include="..\Onion.Demo.DM\Onion.Demo.DomainModel.csproj">
       <Project>{744D0223-9CDF-427A-BEA2-A227AFFD9E63}</Project>
-      <Name>Onion.Demo.DM</Name>
+      <Name>Onion.Demo.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

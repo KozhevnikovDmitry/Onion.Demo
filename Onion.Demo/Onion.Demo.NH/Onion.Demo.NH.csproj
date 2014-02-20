@@ -69,9 +69,9 @@
       <Project>{737AF214-C6AA-4E2F-810F-E135B3689AF1}</Project>
       <Name>Onion.Demo.DomainInterface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Onion.Demo.DM\Onion.Demo.DM.csproj">
+    <ProjectReference Include="..\Onion.Demo.DM\Onion.Demo.DomainModel.csproj">
       <Project>{744D0223-9CDF-427A-BEA2-A227AFFD9E63}</Project>
-      <Name>Onion.Demo.DM</Name>
+      <Name>Onion.Demo.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

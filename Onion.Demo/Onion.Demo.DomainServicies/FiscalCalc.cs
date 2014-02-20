@@ -2,7 +2,7 @@
 using Onion.Demo.DM;
 using Onion.Demo.DomainInterface;
 
-namespace Onion.Demo.DomainServicies
+namespace Onion.Demo.DomainServices
 {
     public class FiscalCalc : IFiscalCalc
     {
@@ -14,13 +14,13 @@ namespace Onion.Demo.DomainServicies
                 if (employee.Salary < 1000)
                 {
                     result += 0.1 * employee.Salary;
-                    break;
+                    continue;
                 }
 
                 if (employee.Salary > 10000)
                 {
                     result += 0.35 * employee.Salary;
-                    break;
+                    continue;
                 }
 
                 result += 0.25 * employee.Salary;

@@ -1,6 +1,6 @@
 ﻿using Autofac;
 using Onion.Demo.DomainInterface;
-using Onion.Demo.DomainServicies;
+using Onion.Demo.DomainServices;
 
 namespace Onion.Demo.Dependency
 {
