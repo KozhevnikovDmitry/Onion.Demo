@@ -87,9 +87,9 @@
       <Project>{B4D56642-2892-4DBF-910A-564BFFAEAD92}</Project>
       <Name>Onion.Demo.NH</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Onion.Demo.Services\Onion.Demo.Services.csproj">
+    <ProjectReference Include="..\Onion.Demo.Services\Onion.Demo.Dependency.csproj">
       <Project>{A4B38D41-C215-4904-88FD-D463E7D5978D}</Project>
-      <Name>Onion.Demo.Services</Name>
+      <Name>Onion.Demo.Dependency</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,7 +8,7 @@ using Onion.Demo.DomainServicies.Interface;
 
 namespace Onion.Demo.NH
 {
-    internal class NhEmployeeRepository : IEmployeeRepository
+    public class NhEmployeeRepository : IEmployeeRepository
     {
         private readonly ISessionFactory _sessionFactory;
 

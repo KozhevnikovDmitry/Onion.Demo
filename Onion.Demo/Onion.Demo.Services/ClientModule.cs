@@ -1,10 +1,11 @@
 ﻿using System.ServiceModel;
 using Autofac;
+using Onion.Demo.Client;
 using Onion.Demo.Client.EmployeeService;
 using Onion.Demo.Client.FiscalService;
 using Onion.Demo.DomainServicies.Interface;
 
-namespace Onion.Demo.Client
+namespace Onion.Demo.Dependency
 {
     public class ClientModule : Module
     {

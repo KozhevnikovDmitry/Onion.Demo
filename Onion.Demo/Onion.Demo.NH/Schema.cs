@@ -10,7 +10,7 @@ using NHibernate.Tool.hbm2ddl;
 
 namespace Onion.Demo.NH
 {
-    internal class Schema
+    public class Schema
     {
         public Schema()
         {

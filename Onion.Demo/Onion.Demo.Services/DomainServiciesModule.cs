@@ -1,7 +1,8 @@
 ﻿using Autofac;
+using Onion.Demo.DomainServicies;
 using Onion.Demo.DomainServicies.Interface;
 
-namespace Onion.Demo.DomainServicies
+namespace Onion.Demo.Dependency
 {
     public class DomainServiciesModule : Module
     {

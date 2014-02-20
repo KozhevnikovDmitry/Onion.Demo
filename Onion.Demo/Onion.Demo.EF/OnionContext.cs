@@ -1,11 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using Onion.Demo.DM;
 
 namespace Onion.Demo.EF
 {
-    [DbConfigurationType(typeof(OnionConfiguration))] 
-    internal class OnionContext : DbContext
+    [DbConfigurationType(typeof(OnionConfiguration))]
+    public class OnionContext : DbContext
     {
         public OnionContext()
             : base("OnionDemo")

@@ -7,7 +7,7 @@ using Onion.Demo.DomainServicies.Interface;
 
 namespace Onion.Demo.EF
 {
-    internal class EfEmployeeRepository : IEmployeeRepository
+    public class EfEmployeeRepository : IEmployeeRepository
     {
         private readonly DbContextFactory _dbContextFactory;
 

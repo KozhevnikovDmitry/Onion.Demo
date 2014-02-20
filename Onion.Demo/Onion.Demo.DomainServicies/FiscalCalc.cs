@@ -5,7 +5,7 @@ using Onion.Demo.DomainServicies.Interface;
 
 namespace Onion.Demo.DomainServicies
 {
-    internal class FiscalCalc : IFiscalCalc
+    public class FiscalCalc : IFiscalCalc
     {
         public double CalculateTax(IList<Employee> employees)
         {

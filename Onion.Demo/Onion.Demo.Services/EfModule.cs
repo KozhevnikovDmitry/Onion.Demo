@@ -1,7 +1,8 @@
 ﻿using Autofac;
 using Onion.Demo.DomainServicies.Interface;
+using Onion.Demo.EF;
 
-namespace Onion.Demo.EF
+namespace Onion.Demo.Dependency
 {
     public class EfModule : Module
     {

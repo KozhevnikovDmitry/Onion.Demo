@@ -1,9 +1,5 @@
 ﻿using Autofac;
-using Onion.Demo.Client;
-using Onion.Demo.DomainServicies;
-using Onion.Demo.EF;
-using Onion.Demo.NH;
-using Onion.Demo.Services;
+using Onion.Demo.Dependency;
 
 namespace Onion.Demo.ConsoleUI
 {
@@ -12,8 +8,7 @@ namespace Onion.Demo.ConsoleUI
         static void Main(string[] args)
         {
             var root = new Root();
-            root.Register(new EfModule(), new DomainServiciesModule(), new ConsoleUiModule());
-            //root.Register(new ClientModule(), new ConsoleUiModule());
+            root.Register(new ConsoleUiModule());
 
             var demo = root.Resolve().Resolve<OnionDemo>();
             demo.Demo();

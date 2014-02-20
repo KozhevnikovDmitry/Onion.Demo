@@ -1,8 +1,6 @@
 ﻿using System;
 using Autofac;
-using Onion.Demo.DomainServicies;
-using Onion.Demo.NH;
-using Onion.Demo.Services;
+using Onion.Demo.Dependency;
 
 namespace Onion.Demo.Server
 {
@@ -11,7 +9,7 @@ namespace Onion.Demo.Server
         static void Main(string[] args)
         {
             var root = new Root();
-            root.Register(new NhModule(), new DomainServiciesModule(), new ServerModule());
+            root.Register(new ServerModule());
 
             var server = root.Resolve().Resolve<OnionServer>();
             server.Start();

@@ -1,19 +1,19 @@
 ﻿using Autofac;
 
-namespace Onion.Demo.Services
+namespace Onion.Demo.Dependency
 {
     public class Root
     {
         private IContainer _container;
         
-        public void Register(params Module[] modules)
+        public void Register(Module consumerModule)
         {
             var builder = new ContainerBuilder();
-
-            foreach (var module in modules)
-            {
-                builder.RegisterModule(module);
-            }
+            builder.RegisterModule(consumerModule);
+            builder.RegisterModule<NhModule>();
+            //builder.RegisterModule<EfModule>();
+            builder.RegisterModule<DomainServiciesModule>();
+            //builder.RegisterModule<ClientModule>();
 
             _container = builder.Build();
         }

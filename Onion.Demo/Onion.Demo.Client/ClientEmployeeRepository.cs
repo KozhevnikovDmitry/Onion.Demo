@@ -5,7 +5,7 @@ using Onion.Demo.DomainServicies.Interface;
 
 namespace Onion.Demo.Client
 {
-    internal class ClientEmployeeRepository : IEmployeeRepository
+    public class ClientEmployeeRepository : IEmployeeRepository
     {
         private readonly IEmployeeService _employeeService;
 

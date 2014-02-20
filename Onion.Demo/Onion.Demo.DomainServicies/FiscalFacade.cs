@@ -3,7 +3,7 @@ using Onion.Demo.DomainServicies.Interface;
 
 namespace Onion.Demo.DomainServicies
 {
-    internal class FiscalFacade : IFiscalFacade
+    public class FiscalFacade : IFiscalFacade
     {
         private readonly IEmployeeRepository _employeeRepository;
         private readonly IFiscalCalc _fiscalCalc;
