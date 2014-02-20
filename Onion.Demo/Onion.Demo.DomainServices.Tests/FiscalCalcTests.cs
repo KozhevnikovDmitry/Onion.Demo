@@ -41,7 +41,7 @@ namespace Onion.Demo.DomainServices.Tests
         }
         
         [Test]
-        public void CalculateTax_SalarymoreThen1000LessThen10000_TaxIs25perc_Test()
+        public void CalculateTax_SalaryMoreThen1000LessThen10000_TaxIs25perc_Test()
         {
             // Arrange
             var employee = new Employee
