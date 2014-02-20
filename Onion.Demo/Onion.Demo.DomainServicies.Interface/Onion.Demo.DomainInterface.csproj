@@ -8,8 +8,8 @@
     <ProjectGuid>{737AF214-C6AA-4E2F-810F-E135B3689AF1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Onion.Demo.DomainServicies.Interface</RootNamespace>
-    <AssemblyName>Onion.Demo.DomainServicies.Interface</AssemblyName>
+    <RootNamespace>Onion.Demo.DomainInterface</RootNamespace>
+    <AssemblyName>Onion.Demo.DomainInterface</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,13 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseException.cs" />
-    <Compile Include="FiscalException.cs" />
     <Compile Include="IEmployeeRepository.cs" />
+    <Compile Include="IEmployeeService.cs" />
     <Compile Include="IFiscalCalc.cs" />
     <Compile Include="IFiscalFacade.cs" />
+    <Compile Include="IFiscalService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryException.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Onion.Demo.DM\Onion.Demo.DM.csproj">

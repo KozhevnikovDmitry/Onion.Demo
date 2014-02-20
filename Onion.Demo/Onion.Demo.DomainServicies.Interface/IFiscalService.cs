@@ -1,6 +1,6 @@
 ﻿namespace Onion.Demo.DomainInterface
 {
-    public interface IFiscalFacade
+    public interface IFiscalService
     {
         double CalculateAllTax();
     }

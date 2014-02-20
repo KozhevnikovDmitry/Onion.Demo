@@ -1,6 +1,6 @@
 ﻿using Autofac;
 using NHibernate;
-using Onion.Demo.DomainServicies.Interface;
+using Onion.Demo.DomainInterface;
 using Onion.Demo.NH;
 
 namespace Onion.Demo.Dependency

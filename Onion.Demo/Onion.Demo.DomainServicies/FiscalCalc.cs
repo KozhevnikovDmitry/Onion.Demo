@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Onion.Demo.DM;
-using Onion.Demo.DomainServicies.Interface;
+using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.DomainServicies
 {
@@ -9,35 +8,25 @@ namespace Onion.Demo.DomainServicies
     {
         public double CalculateTax(IList<Employee> employees)
         {
-            if (employees == null) 
-                throw new ArgumentNullException("employees");
-
-            try
+            double result = 0;
+            foreach (var employee in employees)
             {
-                double result = 0;
-                foreach (var employee in employees)
+                if (employee.Salary < 1000)
                 {
-                    if (employee.Salary < 1000)
-                    {
-                        result += 0.1 * employee.Salary;
-                        break;
-                    }
-
-                    if (employee.Salary > 10000)
-                    {
-                        result += 0.35 * employee.Salary;
-                        break;
-                    }
-
-                    result += 0.25 * employee.Salary;
+                    result += 0.1 * employee.Salary;
+                    break;
                 }
 
-                return result;
+                if (employee.Salary > 10000)
+                {
+                    result += 0.35 * employee.Salary;
+                    break;
+                }
+
+                result += 0.25 * employee.Salary;
             }
-            catch (Exception ex)
-            {
-                throw new FiscalException("Error occurs during calculate tax", ex);
-            }
+
+            return result;
         }
     }
 }

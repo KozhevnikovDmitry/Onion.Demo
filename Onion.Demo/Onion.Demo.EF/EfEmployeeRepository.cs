@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using Onion.Demo.DM;
-using Onion.Demo.DomainServicies.Interface;
+using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.EF
 {
@@ -18,71 +18,42 @@ namespace Onion.Demo.EF
 
         public IList<Employee> SelectAll()
         {
-            try
+            using (var context = _dbContextFactory.Create())
             {
-                using (var context = _dbContextFactory.Create())
-                {
-                    return context.Employees.ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new RepositoryException("Error occurs during select employees", ex);
+                return context.Employees.ToList();
             }
         }
 
         public IList<Employee> SelectStaff()
         {
-            try
+            using (var context = _dbContextFactory.Create())
             {
-                using (var context = _dbContextFactory.Create())
-                {
-                    return context.Employees.Where(t => t.IsInStaff).ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new RepositoryException("Error occurs during select employees", ex);
+                return context.Employees.Where(t => t.IsInStaff).ToList();
             }
         }
 
         public Employee Save(Employee employee)
         {
-            try
+            using (var context = _dbContextFactory.Create())
             {
-                using (var context = _dbContextFactory.Create())
+                if (employee.Id == new Guid())
                 {
-                    if (employee.Id == new Guid())
-                    {
-                        employee.Id = Guid.NewGuid();
-                    }
-
-                    context.Employees.AddOrUpdate(employee);
-                    context.SaveChanges();
-                    return employee;
+                    employee.Id = Guid.NewGuid();
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new RepositoryException("Error occurs during save employee", ex);
+
+                context.Employees.AddOrUpdate(employee);
+                context.SaveChanges();
+                return employee;
             }
         }
 
         public void Remove(Employee employee)
         {
-            try
+            using (var context = _dbContextFactory.Create())
             {
-                using (var context = _dbContextFactory.Create())
-                {
-                    context.Employees.Remove(employee);
-                    context.SaveChanges();
-                }
+                context.Employees.Remove(employee);
+                context.SaveChanges();
             }
-            catch (Exception ex)
-            {
-                throw new RepositoryException("Error occurs during rempve employee", ex);
-            }
-
         }
     }
 }

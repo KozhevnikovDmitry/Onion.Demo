@@ -1,6 +1,6 @@
 using System;
 using Onion.Demo.DM;
-using Onion.Demo.DomainServicies.Interface;
+using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.ConsoleUI
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using Onion.Demo.DomainServicies.Interface;
+﻿using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.DomainServicies
 {
@@ -16,19 +15,8 @@ namespace Onion.Demo.DomainServicies
 
         public double CalculateAllTax()
         {
-            try
-            {
-                var employees = _employeeRepository.SelectStaff();
-                return _fiscalCalc.CalculateTax(employees);
-            }
-            catch (BaseException)
-            {
-                throw;
-            }
-            catch (Exception ex)
-            {
-                throw new FiscalException("Error occurs during calculate tax", ex);
-            }
+            var employees = _employeeRepository.SelectStaff();
+            return _fiscalCalc.CalculateTax(employees);
         }
     }
 }

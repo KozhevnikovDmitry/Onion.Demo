@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using NHibernate;
 using NHibernate.Linq;
 using Onion.Demo.DM;
-using Onion.Demo.DomainServicies.Interface;
+using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.NH
 {
@@ -19,70 +18,42 @@ namespace Onion.Demo.NH
 
         public IList<Employee> SelectAll()
         {
-            try
+            using (var session = _sessionFactory.OpenSession())
             {
-                using (var session = _sessionFactory.OpenSession())
-                {
-                    return session.Query<Employee>().ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new RepositoryException("Error occurs during select employees", ex);
+                return session.Query<Employee>().ToList();
             }
         }
 
         public IList<Employee> SelectStaff()
         {
-            try
+            using (var session = _sessionFactory.OpenSession())
             {
-                using (var session = _sessionFactory.OpenSession())
-                {
-                    return session.Query<Employee>().Where(t => t.IsInStaff).ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new RepositoryException("Error occurs during select employees", ex);
+                return session.Query<Employee>().Where(t => t.IsInStaff).ToList();
             }
         }
 
         public Employee Save(Employee employee)
         {
-            try
+            using (var session = _sessionFactory.OpenSession())
             {
-                using (var session = _sessionFactory.OpenSession())
+                using (var transaction = session.BeginTransaction())
                 {
-                    using (var transaction = session.BeginTransaction())
-                    {
-                        session.SaveOrUpdate(employee);
-                        transaction.Commit();
-                        return employee;
-                    }
+                    session.SaveOrUpdate(employee);
+                    transaction.Commit();
+                    return employee;
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new RepositoryException("Error occurs during save employee", ex);
             }
         }
 
         public void Remove(Employee employee)
         {
-            try
+            using (var session = _sessionFactory.OpenSession())
             {
-                using (var session = _sessionFactory.OpenSession())
+                using (var transaction = session.BeginTransaction())
                 {
-                    using (var transaction = session.BeginTransaction())
-                    {
-                        session.Delete(employee);
-                        transaction.Commit();
-                    }
+                    session.Delete(employee);
+                    transaction.Commit();
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new RepositoryException("Error occurs during rempve employee", ex);
             }
 
         }

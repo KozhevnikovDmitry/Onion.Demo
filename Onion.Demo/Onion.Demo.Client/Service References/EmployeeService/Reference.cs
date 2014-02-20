@@ -12,29 +12,29 @@ namespace Onion.Demo.Client.EmployeeService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EmployeeService.IEmployeeService")]
-    public interface IEmployeeService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EmployeeService.EmployeeService")]
+    public interface EmployeeService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/SelectAll", ReplyAction="http://tempuri.org/IEmployeeService/SelectAllResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EmployeeService/SelectAll", ReplyAction="http://tempuri.org/EmployeeService/SelectAllResponse")]
         Onion.Demo.DM.Employee[] SelectAll();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/SelectStaff", ReplyAction="http://tempuri.org/IEmployeeService/SelectStaffResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EmployeeService/SelectStaff", ReplyAction="http://tempuri.org/EmployeeService/SelectStaffResponse")]
         Onion.Demo.DM.Employee[] SelectStaff();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/Save", ReplyAction="http://tempuri.org/IEmployeeService/SaveResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EmployeeService/Save", ReplyAction="http://tempuri.org/EmployeeService/SaveResponse")]
         Onion.Demo.DM.Employee Save(Onion.Demo.DM.Employee employee);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/Remove", ReplyAction="http://tempuri.org/IEmployeeService/RemoveResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EmployeeService/Remove", ReplyAction="http://tempuri.org/EmployeeService/RemoveResponse")]
         void Remove(Onion.Demo.DM.Employee employee);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IEmployeeServiceChannel : Onion.Demo.Client.EmployeeService.IEmployeeService, System.ServiceModel.IClientChannel {
+    public interface EmployeeServiceChannel : Onion.Demo.Client.EmployeeService.EmployeeService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EmployeeServiceClient : System.ServiceModel.ClientBase<Onion.Demo.Client.EmployeeService.IEmployeeService>, Onion.Demo.Client.EmployeeService.IEmployeeService {
+    public partial class EmployeeServiceClient : System.ServiceModel.ClientBase<Onion.Demo.Client.EmployeeService.EmployeeService>, Onion.Demo.Client.EmployeeService.EmployeeService {
         
         public EmployeeServiceClient() {
         }

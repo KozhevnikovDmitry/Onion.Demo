@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.DM", "Onion.Demo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.DomainServicies", "Onion.Demo.DomainServicies\Onion.Demo.DomainServicies.csproj", "{C59CBEFF-C615-4A8A-A393-634ED198E507}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.DomainServicies.Interface", "Onion.Demo.DomainServicies.Interface\Onion.Demo.DomainServicies.Interface.csproj", "{737AF214-C6AA-4E2F-810F-E135B3689AF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.DomainInterface", "Onion.Demo.DomainServicies.Interface\Onion.Demo.DomainInterface.csproj", "{737AF214-C6AA-4E2F-810F-E135B3689AF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Demo.Dependency", "Onion.Demo.Services\Onion.Demo.Dependency.csproj", "{A4B38D41-C215-4904-88FD-D463E7D5978D}"
 EndProject

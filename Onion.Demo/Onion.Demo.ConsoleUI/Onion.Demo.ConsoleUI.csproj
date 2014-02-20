@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Onion.Demo.DomainServicies.Interface\Onion.Demo.DomainServicies.Interface.csproj">
+    <ProjectReference Include="..\Onion.Demo.DomainServicies.Interface\Onion.Demo.DomainInterface.csproj">
       <Project>{737AF214-C6AA-4E2F-810F-E135B3689AF1}</Project>
-      <Name>Onion.Demo.DomainServicies.Interface</Name>
+      <Name>Onion.Demo.DomainInterface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Onion.Demo.Client\Onion.Demo.Client.csproj">
       <Project>{A8D41C7A-5A32-454B-86A5-AAA796F8428F}</Project>

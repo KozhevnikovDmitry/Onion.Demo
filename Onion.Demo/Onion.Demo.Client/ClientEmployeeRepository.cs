@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using Onion.Demo.Client.EmployeeService;
 using Onion.Demo.DM;
-using Onion.Demo.DomainServicies.Interface;
+using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.Client
 {

@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using Onion.Demo.DomainServicies.Interface;
+using Onion.Demo.DomainInterface;
 using Onion.Demo.EF;
 
 namespace Onion.Demo.Dependency

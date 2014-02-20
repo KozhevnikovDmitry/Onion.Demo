@@ -64,9 +64,9 @@
       <Project>{A8D41C7A-5A32-454B-86A5-AAA796F8428F}</Project>
       <Name>Onion.Demo.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Onion.Demo.DomainServicies.Interface\Onion.Demo.DomainServicies.Interface.csproj">
+    <ProjectReference Include="..\Onion.Demo.DomainServicies.Interface\Onion.Demo.DomainInterface.csproj">
       <Project>{737AF214-C6AA-4E2F-810F-E135B3689AF1}</Project>
-      <Name>Onion.Demo.DomainServicies.Interface</Name>
+      <Name>Onion.Demo.DomainInterface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Onion.Demo.DM\Onion.Demo.DM.csproj">
       <Project>{744D0223-9CDF-427A-BEA2-A227AFFD9E63}</Project>
