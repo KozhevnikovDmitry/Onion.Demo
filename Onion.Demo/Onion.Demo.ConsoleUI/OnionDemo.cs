@@ -1,5 +1,5 @@
 using System;
-using Onion.Demo.DM;
+using Onion.Demo.DomainModel;
 using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.ConsoleUI

@@ -1,4 +1,5 @@
-﻿using Onion.Demo.DomainInterface;
+﻿using Onion.Demo.Client.FiscalService;
+using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.Client
 {

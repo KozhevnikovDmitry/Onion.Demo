@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
-using Onion.Demo.DM;
+using Onion.Demo.DomainModel;
 using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.EF

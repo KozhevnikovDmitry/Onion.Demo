@@ -2,7 +2,7 @@
 using System.Linq;
 using NHibernate;
 using NHibernate.Linq;
-using Onion.Demo.DM;
+using Onion.Demo.DomainModel;
 using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.NH

@@ -41,10 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IEmployeeRepository.cs" />
-    <Compile Include="IEmployeeService.cs" />
     <Compile Include="IFiscalCalc.cs" />
     <Compile Include="IFiscalFacade.cs" />
-    <Compile Include="IFiscalService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

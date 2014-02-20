@@ -10,10 +10,22 @@ namespace Onion.Demo.Dependency
         {
             var builder = new ContainerBuilder();
             builder.RegisterModule(consumerModule);
-            builder.RegisterModule<NhModule>();
+            //builder.RegisterModule<NhModule>();
             //builder.RegisterModule<EfModule>();
-            builder.RegisterModule<DomainServiciesModule>();
-            //builder.RegisterModule<ClientModule>();
+            //builder.RegisterModule<DomainServiciesModule>();
+            builder.RegisterModule<ClientModule>();
+
+            _container = builder.Build();
+        }
+
+        public void Register(params Module[] modules)
+        {
+            var builder = new ContainerBuilder();
+
+            foreach (var module in modules)
+            {
+                builder.RegisterModule(module);
+            }
 
             _container = builder.Build();
         }

@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Onion.Demo.DM;
+using Onion.Demo.DomainModel;
 
 namespace Onion.Demo.EF
 {

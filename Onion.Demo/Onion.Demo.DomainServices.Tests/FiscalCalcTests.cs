@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
-using Moq;
-using Onion.Demo.DM;
+using Onion.Demo.DomainModel;
 
 namespace Onion.Demo.DomainServices.Tests
 {

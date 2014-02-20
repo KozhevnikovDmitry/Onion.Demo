@@ -12,20 +12,20 @@ namespace Onion.Demo.Client.FiscalService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FiscalService.FiscalService")]
-    public interface FiscalService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FiscalService.IFiscalService")]
+    public interface IFiscalService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FiscalService/CalculateAllTax", ReplyAction="http://tempuri.org/FiscalService/CalculateAllTaxResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFiscalService/CalculateAllTax", ReplyAction="http://tempuri.org/IFiscalService/CalculateAllTaxResponse")]
         double CalculateAllTax();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface FiscalServiceChannel : Onion.Demo.Client.FiscalService.FiscalService, System.ServiceModel.IClientChannel {
+    public interface IFiscalServiceChannel : Onion.Demo.Client.FiscalService.IFiscalService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class FiscalServiceClient : System.ServiceModel.ClientBase<Onion.Demo.Client.FiscalService.FiscalService>, Onion.Demo.Client.FiscalService.FiscalService {
+    public partial class FiscalServiceClient : System.ServiceModel.ClientBase<Onion.Demo.Client.FiscalService.IFiscalService>, Onion.Demo.Client.FiscalService.IFiscalService {
         
         public FiscalServiceClient() {
         }

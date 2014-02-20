@@ -1,9 +1,8 @@
-﻿using System.ServiceModel;
-using Onion.Demo.DomainInterface;
+﻿using Onion.Demo.DomainInterface;
+using Onion.Demo.ServiceInterface;
 
 namespace Onion.Demo.Server
 {
-    [ServiceContract]
     public class FiscalService : IFiscalService
     {
         private readonly IFiscalFacade _fiscalFacade;
@@ -13,7 +12,6 @@ namespace Onion.Demo.Server
             _fiscalFacade = fiscalFacade;
         }
 
-        [OperationContract]
         public double CalculateAllTax()
         {
             return _fiscalFacade.CalculateAllTax();

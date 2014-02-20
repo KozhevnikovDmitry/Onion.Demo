@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using Onion.Demo.DM;
+using Onion.Demo.Client.EmployeeService;
+using Onion.Demo.DomainModel;
 using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.Client

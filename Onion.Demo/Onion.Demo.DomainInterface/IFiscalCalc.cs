@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Onion.Demo.DM;
+using Onion.Demo.DomainModel;
 
 namespace Onion.Demo.DomainInterface
 {

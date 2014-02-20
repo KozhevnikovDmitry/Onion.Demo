@@ -1,6 +1,8 @@
 ﻿using System.ServiceModel;
 using Autofac;
 using Onion.Demo.Client;
+using Onion.Demo.Client.EmployeeService;
+using Onion.Demo.Client.FiscalService;
 using Onion.Demo.DomainInterface;
 
 namespace Onion.Demo.Dependency

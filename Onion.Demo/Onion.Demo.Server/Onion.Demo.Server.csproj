@@ -65,15 +65,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Onion.Demo.DomainServicies.Interface\Onion.Demo.DomainInterface.csproj">
+    <ProjectReference Include="..\Onion.Demo.DomainInterface\Onion.Demo.DomainInterface.csproj">
       <Project>{737AF214-C6AA-4E2F-810F-E135B3689AF1}</Project>
       <Name>Onion.Demo.DomainInterface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Onion.Demo.DM\Onion.Demo.DomainModel.csproj">
+    <ProjectReference Include="..\Onion.Demo.DomainModel\Onion.Demo.DomainModel.csproj">
       <Project>{744D0223-9CDF-427A-BEA2-A227AFFD9E63}</Project>
       <Name>Onion.Demo.DomainModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Onion.Demo.DomainServicies\Onion.Demo.DomainServices.csproj">
+    <ProjectReference Include="..\Onion.Demo.DomainServices\Onion.Demo.DomainServices.csproj">
       <Project>{C59CBEFF-C615-4A8A-A393-634ED198E507}</Project>
       <Name>Onion.Demo.DomainServices</Name>
     </ProjectReference>
@@ -85,9 +85,13 @@
       <Project>{B4D56642-2892-4DBF-910A-564BFFAEAD92}</Project>
       <Name>Onion.Demo.NH</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Onion.Demo.Services\Onion.Demo.Dependency.csproj">
+    <ProjectReference Include="..\Onion.Demo.Dependency\Onion.Demo.Dependency.csproj">
       <Project>{A4B38D41-C215-4904-88FD-D463E7D5978D}</Project>
       <Name>Onion.Demo.Dependency</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Onion.Demo.ServiceInterface\Onion.Demo.ServiceInterface.csproj">
+      <Project>{F1E30315-F810-4B85-A4A0-1693DC9F982F}</Project>
+      <Name>Onion.Demo.ServiceInterface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

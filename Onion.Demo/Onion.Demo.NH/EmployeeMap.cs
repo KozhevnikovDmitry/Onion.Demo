@@ -1,5 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
-using Onion.Demo.DM;
+using Onion.Demo.DomainModel;
 
 namespace Onion.Demo.NH
 {

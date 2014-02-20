@@ -9,13 +9,14 @@ namespace Onion.Demo.Server
         static void Main(string[] args)
         {
             var root = new Root();
-            root.Register(new ServerModule());
+            root.Register(new NhModule(), new DomainServiciesModule(), new ServerModule());
 
             var server = root.Resolve().Resolve<OnionServer>();
             server.Start();
+            Console.WriteLine("Server is started...");
             Console.ReadLine();
-            server.Stop();
 
+            server.Stop();
             root.Release();
         }
     }

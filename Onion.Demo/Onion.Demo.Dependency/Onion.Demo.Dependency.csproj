@@ -84,6 +84,10 @@
       <Project>{B4D56642-2892-4DBF-910A-564BFFAEAD92}</Project>
       <Name>Onion.Demo.NH</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Onion.Demo.ServiceInterface\Onion.Demo.ServiceInterface.csproj">
+      <Project>{F1E30315-F810-4B85-A4A0-1693DC9F982F}</Project>
+      <Name>Onion.Demo.ServiceInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
